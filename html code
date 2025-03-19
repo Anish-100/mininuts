@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Switcher</title>
+    <style>
+        img { width: 100%; max-width: 600px; }
+    </style>
+</head>
+<body>
+    <img id="gif1" src="first.gif">
+    <img id="gif2" src="second.gif" style="display: none;">
+
+    <script>
+        let gif1 = document.getElementById("gif1");
+        let gif2 = document.getElementById("gif2");
+
+        gif1.addEventListener("animationend", function () {
+            gif1.style.display = "none";
+            gif2.style.display = "block";
+        });
+    </script>
+</body>
+</html>
